@@ -22,6 +22,7 @@ const campsitesRouter = require("./routes/campsiteRouter");
 const promotionsRouter = require("./routes/promotionRouter");
 const partnersRouter = require("./routes/partnersRouter");
 const uploadRouter = require("./routes/uploadRouter");
+const favoriteRouter = require("./routes/favoriteRouter");
 
 connect.then(
   () => console.log("Connected correctly to the server"),
@@ -85,6 +86,7 @@ app.use("/campsites", campsitesRouter);
 app.use("/partners", partnersRouter);
 app.use("/promotions", promotionsRouter);
 app.use("/imageUpload", uploadRouter);
+app.use("/favorites", favoriteRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
